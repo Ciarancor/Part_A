@@ -3,6 +3,6 @@ language: java
 jdk:
   - oraclejdk11
 
-after_success:
-  - mvn clean cobertura:cobertura
+build:
+ci:
   - mvn test
