@@ -35,11 +35,6 @@
             <version>5.7.0</version>
             <type>pom.sha512</type>
         </dependency>
-        <dependency>
-            <groupId>com.github.Ciarancor</groupId>
-            <artifactId>Assignment_1</artifactId>
-            <version>-SNAPSHOT</version>
-        </dependency>
     </dependencies>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
