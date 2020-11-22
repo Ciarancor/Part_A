@@ -1,17 +1,11 @@
+/**
+ *
+ * @author Ciaran Corcoran - 17371636
+ */
 
 import java.util.ArrayList;
 import java.util.List;
 
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
-/**
- *
- * @author Ciaran
- */
 public class Student {
     
     private String fName;
@@ -20,8 +14,8 @@ public class Student {
     private int age;
     private int id;
     private String username;
-    private String moduleString = "";
-    private List<Modules> modules = new ArrayList<Modules>();
+    private String moduleString = "";  // string to add moules to for printing
+    private List<Modules> modules = new ArrayList<Modules>(); // array of modules that student takes
 
     public Student(String fName, String surname, String dob, int age, int id) {
         this.fName = fName;
@@ -29,7 +23,7 @@ public class Student {
         this.dob = dob;
         this.age = age;
         this.id = id;
-        createUsername();
+        createUsername(); // generates username for student
     }
     
     public String createUsername(){
@@ -37,7 +31,7 @@ public class Student {
         return username;
     }
     
-    public void addModules(List<Modules> modules){
+    public void addModules(List<Modules> modules){ // function to add modules to student. used by Course when student is added 
         this.modules=modules;
     }
 
@@ -65,7 +59,7 @@ public class Student {
         return username;
     }
     
-    public String getModules(){
+    public String getModules(){  // converts module array to string for printing
         for (int i=0; i<modules.size(); i++){
             moduleString += modules.get(i).getName()+ " ";
         }
@@ -76,8 +70,5 @@ public class Student {
     @Override
     public String toString() {
         return "Student{" + "fName=" + fName + ", surname=" + surname + ", dob=" + dob + ", age=" + age + ", id=" + id + ", username=" + username + ", Modules= " + getModules() + '}';
-    }
-
-    
-    
+    }  
 }
